@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MarvelComponent } from './services/marvel/marvel.component';
 import { MarvelModelComponent } from './model/marvel-model/marvel-model.component';
 import { MarvelServiceComponent } from './services/marvel-service/marvel-service.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MarvelComponent,
     MarvelModelComponent,
-    MarvelServiceComponent
+    MarvelServiceComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
