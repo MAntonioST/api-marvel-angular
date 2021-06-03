@@ -24,6 +24,7 @@ export class CharactersComponent implements OnInit {
     this.characterService.getAllCharacters().subscribe(
       resp => {
         this.allCharacters = resp
+        console.log(this.allCharacters)
       },
       error => {
         alert("Houve algum erro ao carregar a lista")
