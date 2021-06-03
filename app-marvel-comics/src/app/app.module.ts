@@ -7,16 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './views/home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { CharacterComponent } from './views/home/character/character.component';
-
-
-
+import { CharactersComponent } from './views/home/characters/characters.component';
+import { CharacterComponent } from './views/home/characters/character/character.component';
+import { FlexLayoutModule} from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    CharactersComponent,
     CharacterComponent,
 
 
@@ -28,6 +30,9 @@ import { CharacterComponent } from './views/home/character/character.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatListModule
 
   ],
   providers: [],

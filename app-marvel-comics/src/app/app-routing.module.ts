@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CharacterComponent } from './views/home/character/character.component';
+import { CharactersComponent } from './views/home/characters/characters.component';
 import { HomeComponent } from './views/home/home.component';
 
 
@@ -12,7 +12,7 @@ const routes: Routes = [
 
 {
 path: 'characters',
-component: CharacterComponent,
+component: CharactersComponent,
 pathMatch: 'full'
 }
 

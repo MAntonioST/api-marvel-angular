@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Characters } from 'src/app/character';
+import { Characters } from 'src/app/model/character';
 import { MarvelService } from 'src/app/shared/service/marvel.service';
 
 @Component({
-  selector: 'app-character',
-  templateUrl: './character.component.html',
-  styleUrls: ['./character.component.css']
+  selector: 'app-characters',
+  templateUrl: './characters.component.html',
+  styleUrls: ['./characters.component.css']
 })
-export class CharacterComponent implements OnInit {
+export class CharactersComponent implements OnInit {
 
-  allCaracters: Characters [] = [];
+  allCharacters: Characters [] = [];
 
   constructor(private characterService: MarvelService) { }
 
@@ -23,7 +23,7 @@ export class CharacterComponent implements OnInit {
 
     this.characterService.getAllCharacters().subscribe(
       resp => {
-        this.allCaracters = resp
+        this.allCharacters = resp
       },
       error => {
         alert("Houve algum erro ao carregar a lista")
