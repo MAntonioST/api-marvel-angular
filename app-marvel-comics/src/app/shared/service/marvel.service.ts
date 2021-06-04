@@ -19,15 +19,17 @@ export class MarvelService {
   TS = environment.timeStamp;
   URL_API = environment.urlAPI
 
-   urlApi = `${this.URL_API}?ts=${this.TS}&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
+  urlApi = `${this.URL_API}?ts=${this.TS}&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
+
 
   constructor(
-    private http:HttpClient
+    private http: HttpClient
   ) { }
 
- public  getAllCharacters(): Observable<Characters[]>{
+
+  public getAllCharacters(): Observable<Characters[]> {
     return this.http.get<Characters[]>(this.urlApi)
-    .pipe(map((data:any) => data.data.results))
+      .pipe(map((data: any) => data.data.results))
 
   }
 

@@ -12,7 +12,9 @@ import { CharacterComponent } from './views/home/characters/character/character.
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-
+import { FooterComponent } from './views/home/footer/footer.component';
+import { ImagemComponent } from './views/home/imagem/imagem.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { MatListModule } from '@angular/material/list';
     HomeComponent,
     CharactersComponent,
     CharacterComponent,
+    FooterComponent,
+    ImagemComponent,
 
 
   ],
@@ -32,7 +36,8 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatCardModule,
     FlexLayoutModule,
-    MatListModule
+    MatListModule,
+    MatSidenavModule
 
   ],
   providers: [],
