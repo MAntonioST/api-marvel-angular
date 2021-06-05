@@ -1,0 +1,13 @@
+<mat-toolbar color="warn">
+    <mat-toolbar-row>
+        <app-menu></app-menu>
+        <span class="font-title">MARVEL APP</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<ng-container *ngIf="isValid">
+    <img mat-card-image src="../../../assets/images/maxresdefault.jpg" alt="Spider-Man" title="Spider-Man">
+</ng-container>

@@ -4,17 +4,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './views/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { CharactersComponent } from './views/home/characters/characters.component';
-import { CharacterComponent } from './views/home/characters/character/character.component';
+import { CharactersComponent } from './characters/characters.component';
+import { CharacterComponent } from './character/character.component';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import { FooterComponent } from './views/home/footer/footer.component';
-import { ImagemComponent } from './views/home/imagem/imagem.component';
+import { FooterComponent } from './footer/footer.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MenuComponent } from './menu/menu.component';
+import { MenubarModule } from 'primeng/menubar';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     CharactersComponent,
     CharacterComponent,
     FooterComponent,
-    ImagemComponent,
+    MenuComponent
+
 
 
   ],
@@ -37,7 +42,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatCardModule,
     FlexLayoutModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MenubarModule
 
   ],
   providers: [],
