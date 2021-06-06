@@ -1,13 +1,33 @@
-<mat-card class="mat-card-marvel geral">
+<div *ngIf="!isLoading">
+    <mat-spinner color="warn">
+        <mat-card class="mat-card-marvel geral">
 
-    <img mat-card-image src={{character.thumbnail.path}}.{{character.thumbnail.extension}} alt="{{character.name}} ">
+            <img mat-card-image src={{character.thumbnail.path}}.{{character.thumbnail.extension}} alt="{{character.name}} ">
 
+            <mat-card-title>
+                {{character.name}}
+            </mat-card-title>
 
-    <mat-card-title>
-        {{character.name}}
-    </mat-card-title>
+            <mat-card-footer>
+                <a href="{{character.urls[0].url}}" target="_blank" fxFlex mat-flat-button color="warn">Details</a>
+            </mat-card-footer>
+        </mat-card>
+    </mat-spinner>
+</div>
 
-    <mat-card-footer>
-        <a href="{{character.urls[0].url}}" target="_blank" fxFlex mat-flat-button color="warn">Details</a>
-    </mat-card-footer>
-</mat-card>
+<div *ngIf="isLoading">
+
+    <mat-card class="mat-card-marvel geral">
+
+        <img mat-card-image src={{character.thumbnail.path}}.{{character.thumbnail.extension}} alt="{{character.name}} ">
+
+        <mat-card-title>
+            {{character.name}}
+        </mat-card-title>
+
+        <mat-card-footer>
+            <a href="{{character.urls[0].url}}" target="_blank" fxFlex mat-flat-button color="warn">Details</a>
+        </mat-card-footer>
+    </mat-card>
+
+</div>
