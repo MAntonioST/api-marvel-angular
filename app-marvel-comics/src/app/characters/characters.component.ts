@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ModelCharacter } from 'src/app/model/modelCharacter';
 import { MarvelService } from 'src/app/service/marvel.service';
 
@@ -11,8 +11,10 @@ export class CharactersComponent implements OnInit {
 
   allCharacters: ModelCharacter [] = [];
 
-  constructor(private characterService: MarvelService) { }
+  @Input()
+  isLoading: any;
 
+  constructor(private characterService: MarvelService) { }
 
 
   ngOnInit(): void {
@@ -22,8 +24,13 @@ export class CharactersComponent implements OnInit {
  public getAllCharacters(){
 
     this.characterService.getAllCharacters().subscribe(
+
       resp => {
+        this.isLoading=false;
         this.allCharacters = resp
+        if(this.allCharacters.length){
+          this.isLoading=true
+        }
       },
       error => {
         alert("Houve algum erro ao carregar a lista")

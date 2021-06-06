@@ -2,12 +2,11 @@
     <app-home></app-home>
     <div fxLayout="row wrap">
 
-        <div fxFlex="25" fxFlex.md="33" fxFle.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let character  of allCharacters" style="padding: 15px">
-
-            <!--Passando informação de um componente para o outro usando o input decorator, com base no
-          character que esta sendo passado no ngFor-->
+        <div fxFlex="25" fxFlex.md="33" fxFle.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let character  of allCharacters" style='padding: 15px'>
             <app-character [character]="character"></app-character>
-
         </div>
+    </div>
+    <div *ngIf="isLoading">
+        <app-footer class="container"></app-footer>
     </div>
 </div>

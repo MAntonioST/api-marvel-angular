@@ -18,3 +18,11 @@ img.mat-card-image {
     right: 80px;
     height: 80%;
 }
+
+.container {
+    position: relative;
+    text-align: center;
+    color: red;
+    bottom: 0;
+    width: 100%;
+}

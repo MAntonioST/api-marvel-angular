@@ -7,7 +7,7 @@ export const environment = {
   timeStamp: '1622462733',
   publicKey: '64b62fb71adca5446477d5f4351f4cdb',
   md5: '313daa11ac0ff44c4030971be0e419fe',
-  urlAPI: "http://gateway.marvel.com:80/v1/public/events"
+  urlAPI: "http://gateway.marvel.com:80/v1/public/characters"
 };
 
 /*

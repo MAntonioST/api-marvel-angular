@@ -17,8 +17,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MenuComponent } from './menu/menu.component';
 import { MenubarModule } from 'primeng/menubar';
-
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,7 @@ import { MenubarModule } from 'primeng/menubar';
     CharactersComponent,
     CharacterComponent,
     FooterComponent,
-    MenuComponent
-
+    MenuComponent,
 
 
   ],
@@ -44,7 +43,9 @@ import { MenubarModule } from 'primeng/menubar';
     MatListModule,
     MatSidenavModule,
     MatIconModule,
-    MenubarModule
+    MenubarModule,
+    MatProgressSpinnerModule,
+    LazyLoadImageModule
 
   ],
   providers: [],

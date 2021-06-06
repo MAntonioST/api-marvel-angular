@@ -22,6 +22,7 @@ export class MenuComponent implements OnInit {
         },
         ]
       },
+
       {
         label: 'Characters',
         icon: 'pi pi-fw pi-user',

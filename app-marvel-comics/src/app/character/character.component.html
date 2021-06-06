@@ -1,21 +1,13 @@
-<mat-card class="mat-card-marvel">
+<mat-card class="mat-card-marvel geral">
 
-    <img mat-card-image src={{character.thumbnail.path}}.{{character.thumbnail.extension}} alt="{{character.name}}">
+    <img mat-card-image src={{character.thumbnail.path}}.{{character.thumbnail.extension}} alt="{{character.name}} ">
 
-    <!-- Nome de todos os herois-->
+
     <mat-card-title>
         {{character.name}}
     </mat-card-title>
 
-
-    <!--Descrição dos herois
-    <mat-card-content>
-        {{character.description}}
-    </mat-card-content>
-     -->
-    <!--Detalhes dos personagens-->
     <mat-card-footer>
         <a href="{{character.urls[0].url}}" target="_blank" fxFlex mat-flat-button color="warn">Details</a>
     </mat-card-footer>
-
 </mat-card>
